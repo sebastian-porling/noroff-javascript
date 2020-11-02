@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>To-Do's</title>
+
+    <!-- Bootstrap imports -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+        integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+        integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center display-2 mt-4">To-Do's!</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group mt-4">
+                    <label for="text" class="bmd-label-floating">To-Do Entry</label>
+                    <input type="text" name="text" id="text" class="form-control">
+                </div>
+                <button type="button" class="btn btn-raised btn-primary btn-large" id="encryptBtn"
+                    onclick="addTodo()">Submit</button>
+            </div>
+            <div class="col-sm-6">
+                <div id="todos" class="mt-4">
+                    <span class="bmd-form-group is-filled">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" onclick="removeTodo(this)">
+                                <span class="checkbox-decorator">
+                                    <span class="check"></span>
+                                </span>
+                                A To-Do!
+                            </label>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
